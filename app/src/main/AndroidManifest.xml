@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.rmobile.Headgear">
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/headgher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.rmobile.Headgear.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.rmobile.Headgear.TwoactActivity"
+            android:label="@string/title_activity_twoact"
+            android:parentActivityName="com.rmobile.Headgear.MainActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.rmobile.Headgear.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.rmobile.Headgear.ThreeActivity"
+            android:label="@string/title_activity_three"
+            android:parentActivityName="com.rmobile.Headgear.TwoactActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.rmobile.Headgear.TwoactActivity" />
+        </activity>
+        <activity
+            android:name="com.rmobile.Headgear.FiveActivity"
+            android:label="@string/title_activity_five"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.rmobile.Headgear.InfActivity"
+            android:label="@string/title_activity_inf"
+            android:parentActivityName="com.rmobile.Headgear.MainActivity"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.rmobile.Headgear.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.rmobile.Headgear.dictionary"
+            android:label="@string/title_activity_dictionary"
+            android:parentActivityName="com.rmobile.Headgear.MainActivity"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.rmobile.Headgear.MainActivity" />
+        </activity>
+
+        <activity
+            android:name="com.rmobile.Headgear.Four2"
+            android:label="@string/title_activity_four2"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait"/>
+        <service android:name=".VibrateService" />
+    </application>
+
+</manifest>
